@@ -1,4 +1,4 @@
-# mirrorboard-mac
+# mirrorboard-mac-british-irish
 
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat)](https://github.com/RichardLitt/standard-readme)
 [![GitHub license](https://img.shields.io/github/license/qubist/mirrorboard-mac.svg)](https://github.com/qubist/mirrorboard-mac/blob/master/LICENSE)
@@ -7,24 +7,36 @@
 
 Intuitive one-handed typing on macOS by mirroring the keyboard while spacebar is held
 
+## Note
+
+The keyboard layout in the Karabiner-Elements modification file is set up for **British/Irish English keyboards**. ([What keyboard do I have?](https://support.apple.com/en-gb/HT201794))
+
+It is a modified version (fork) of the [US Keyboard version by qubist](https://github.com/qubist/mirrorboard-mac).
+
+It probably also works on International English keyboards but this is untested. It should be easy to modify for other ISO keyboards.
+
 ## Table of Contents
 
-* [Background](#background)
-* [Install](#install)
-  * [Extra configuration](#extra-configuration)
-* [Usage](#usage)
-* [Notes](#notes)
+- [mirrorboard-mac-british-irish](#mirrorboard-mac-british-irish)
+  - [Note](#note)
+  - [Table of Contents](#table-of-contents)
+  - [Background](#background)
+  - [Install](#install)
+    - [Extra configuration](#extra-configuration)
+  - [Usage](#usage)
+  - [Contribute](#contribute)
+  - [License](#license)
 
 ## Background
-Inspired by Randall Munroe of [xkcd](https://blog.xkcd.com/2007/08/14/mirrorboard-a-one-handed-keyboard-layout-for-the-lazy/) and informed by many others across the internet, I've created an implementation of this concept for macOS.
+Inspired by Randall Munroe of [xkcd](https://blog.xkcd.com/2007/08/14/mirrorboard-a-one-handed-keyboard-layout-for-the-lazy/) and informed by many others across the internet, we've created an implementation of this concept for macOS.
 
 Karabiner-Elements powers this. It's a wonderful piece of software that's completely free, open source, and great for any type of keyboard modification you might want to do on a Mac.
 
 ## Install
 1. Download and install [Karabiner-Elements](https://pqrs.org/osx/karabiner/)
-2. Open this URL in your browser to import the mirrorboard-mac complex modification into karabiner: `karabiner://karabiner/assets/complex_modifications/import?url=https://github.com/qubist/mirrorboard-mac/raw/master/mirrorboard-mac.json`
- You can also download [the JSON file of the complex modification](mirrorboard-mac.json) from this repo and import it manually by adding it to `~/.config/karabiner/assets/complex_modifications`
-3. Open the Karabiner-Elements Preferences window, and enable (or add and enable) the mirrorboard-mac rule in the Complex Modifications tab.
+2. Open this URL in your browser to import the mirrorboard-mac complex modification into karabiner: `karabiner://karabiner/assets/complex_modifications/import?url=https://github.com/louiechristie/mirrorboard-mac-eu/raw/master/mirrorboard-mac-british-irish.json`
+3. You can also download [the JSON file of the complex modification](mirrorboard-mac-british-irish.json) from this repo and import it manually by adding it to `~/.config/karabiner/assets/complex_modifications`
+4. Open the Karabiner-Elements Preferences window, and enable (or add and enable) the mirrorboard-mac rule in the Complex Modifications tab.
 
 Your keyboard should now be mirror-able! Test it out by holding the spacebar and typing something.
 
@@ -56,13 +68,6 @@ I found that having the spacebar output a space only on key-up was manageable, b
 ## Usage
 
 Hold space while typing to mirror the keyboard.
-
-## Notes
-
-The keyboard layout in the Karabiner-Elements modification file is set up for ANSI keyboards. It should be easy to modify for ISO keyboards.
-
-It also should be compatible with many, many keyboard layouts like the ones you can choose from and switch between in System Preferences. For example, I use the Dvorak keyboard layout by adding the Dvorak Input Source in system preferences. With no modifications, this Karabiner-Elements modification still works for me. This is because Karabiner-Elements reads inputs, and modifies them, directly from the keyboard, before they are transformed by layouts you've applied through System Preferences (see this in action by switching to an alternate layout through System Preferences, opening Karabiner-EventViewer, and watching all your keystrokes match up with what's written on your keyboard).
-
 ## Contribute 
 
 Pull requests are accepted.
